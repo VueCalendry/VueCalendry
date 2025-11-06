@@ -1,0 +1,24 @@
+{
+  "name": "vuecalendry",
+  "version": "1.0.0",
+  "description": "A modern, TypeScript-first Vue 3 calendar component.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "pnpm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VueCalendry/VueCalendry.git"
+  },
+  "keywords": [
+    "vue",
+    "calendar",
+    "typescript"
+  ],
+  "author": "William Gagnon",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/VueCalendry/VueCalendry/issues"
+  },
+  "homepage": "https://github.com/VueCalendry/VueCalendry#readme"
+}
