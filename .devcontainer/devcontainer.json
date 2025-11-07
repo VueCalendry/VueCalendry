@@ -37,7 +37,21 @@
     "vscode": {
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh"
-      }
+      },
+      "extensions": [
+        "mikestead.dotenv",
+        "EditorConfig.EditorConfig",
+        "plumbiu.vscode-env-ally",
+        "dbaeumer.vscode-eslint",
+        "codezombiech.gitignore",
+        "DavidAnson.vscode-markdownlint",
+        "codeandstuff.package-json-upgrade",
+        "YoavBls.pretty-ts-errors",
+        "esbenp.prettier-vscode",
+        "rvest.vs-code-prettier-eslint",
+        "stylelint.vscode-stylelint",
+        "Vue.volar"
+      ]
     }
   }
 }

@@ -20,18 +20,33 @@
   "homepage": "https://github.com/VueCalendry/VueCalendry#readme",
   "packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd",
   "engines": {
+    "npm": "please-use-pnpm",
     "node": ">=22",
     "pnpm": ">=10"
   },
   "engineStrict": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "test": "pnpm run test"
   },
   "devDependencies": {
+    "@eslint/css": "^0.14.1",
+    "@eslint/js": "^9.39.1",
+    "@eslint/json": "^0.14.0",
+    "@types/node": "^22.19.0",
     "@typescript-eslint/eslint-plugin": "^8.46.3",
     "@typescript-eslint/parser": "^8.46.3",
     "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-vue": "^10.5.1",
+    "globals": "^16.5.0",
+    "jiti": "^2.6.1",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
+  },
+  "dependencies": {
+    "vue": "^3.5.24"
   }
 }
