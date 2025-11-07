@@ -8,22 +8,33 @@ import pluginPrettier from 'eslint-plugin-prettier/recommended'
 import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
+  { ignores: ['*.d.ts', '**/coverage', '**/dist'] },
   {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts,vue}'],
-    plugins: { js },
-    extends: ['js/recommended'],
-    languageOptions: { globals: globals.browser },
-  },
-  tseslint.configs.recommended,
-  pluginVue.configs['flat/essential'],
-  {
-    files: ['**/*.vue'],
-    languageOptions: { parserOptions: { parser: tseslint.parser } },
+    extends: [
+      js.configs.recommended,
+      ...tseslint.configs.recommended,
+      ...pluginVue.configs['flat/recommended'],
+    ],
+    files: ['**/*.{ts,vue}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: globals.browser,
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
   },
   {
     files: ['**/*.json'],
     plugins: { json },
     language: 'json/json',
+    extends: ['json/recommended'],
+  },
+  {
+    files: ['.devcontainer/*.json', '.vscode/*.json'],
+    plugins: { json },
+    language: 'json/json5',
     extends: ['json/recommended'],
   },
   {

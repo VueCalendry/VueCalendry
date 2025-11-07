@@ -13,7 +13,7 @@
     "typescript"
   ],
   "author": "William Gagnon",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "GPLv3",
   "bugs": {
     "url": "https://github.com/VueCalendry/VueCalendry/issues"
   },
