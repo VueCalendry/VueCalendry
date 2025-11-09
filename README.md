@@ -59,8 +59,8 @@ Import the VueCalendry component into your Vue application and use it as follows
 
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue';
-import VueCalendry from 'vuecalendry';
+import { ref } from 'vue'
+import VueCalendry from 'vuecalendry'
 
 const events = ref([
   {
@@ -75,7 +75,7 @@ const events = ref([
     start: '2024-07-02T12:00:00',
     end: '2024-07-02T13:00:00',
   },
-]);
+])
 </script>
 
 <template>

@@ -9,7 +9,7 @@ import BasicUsage from './exemples/BasicUsage.vue'
 # Playground
 
 Explore how **VueCalendry** behaves in different configurations.
-Each example below uses the real `<VueCalendar />` component — live and interactive.
+Each example below uses the real `<VueCalendry />` component — live and interactive.
 
 <ClientOnly>
   <BasicUsage />

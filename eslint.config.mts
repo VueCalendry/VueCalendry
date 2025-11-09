@@ -4,6 +4,7 @@ import tseslint from 'typescript-eslint'
 import pluginVue from 'eslint-plugin-vue'
 import json from '@eslint/json'
 import css from '@eslint/css'
+import markdown from '@eslint/markdown'
 import pluginPrettier from 'eslint-plugin-prettier/recommended'
 import { defineConfig } from 'eslint/config'
 
@@ -42,6 +43,16 @@ export default defineConfig([
     plugins: { css },
     language: 'css/css',
     extends: ['css/recommended'],
+  },
+  {
+    files: ['**/*.md'],
+    plugins: {
+      markdown,
+    },
+    language: 'markdown/commonmark',
+    rules: {
+      'markdown/no-html': 'off',
+    },
   },
   pluginPrettier,
 ])

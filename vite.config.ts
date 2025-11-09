@@ -13,8 +13,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'Calendry',
-      fileName: (format) => `calendry.${format}.js`,
+      name: 'VueCalendry',
+      fileName: (format) => `vucalendry.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],

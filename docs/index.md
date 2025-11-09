@@ -30,6 +30,7 @@ features:
 ---
 
 ::: code-group
+
 ```sh [npm]
 npm install vuecalendry
 ```
@@ -41,4 +42,5 @@ yarn add vuecalendry
 ```sh [pnpm]
 pnpm add vuecalendry
 ```
+
 :::
