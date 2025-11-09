@@ -17,6 +17,9 @@ RUN corepack enable && corepack prepare pnpm@latest-10 --activate
 # Copy only package files for dependency install
 COPY package.json pnpm-lock.yaml ./
 
+# Vitepress port
+EXPOSE 5173
+
 # --------------------------------------
 # Production deps only
 # --------------------------------------

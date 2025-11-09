@@ -1,27 +1,22 @@
+---
+title: Playground
+---
+
+<script setup>
+import BasicUsage from './exemples/BasicUsage.vue'
+</script>
+
 # Playground
 
 Explore how **VueCalendry** behaves in different configurations.
 Each example below uses the real `<VueCalendar />` component — live and interactive.
 
----
-
-## 🧭 Basic Calendar
-
 <ClientOnly>
   <BasicUsage />
 </ClientOnly>
 
-```vue
+```vue [Vue]
 <template>
-  <Calendar />
+  <VueCalendry />
 </template>
-
-<script setup>
-import { Calendar } from 'calendry'
-import 'calendry/style.css'
-</script>
 ```
-
-<script setup>
-import BasicUsage from './examples/BasicUsage.vue'
-</script>

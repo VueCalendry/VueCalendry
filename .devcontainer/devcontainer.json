@@ -17,7 +17,9 @@
   // "features": {},
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
+  "forwardPorts": [5173],
+
+  // "appPort": 5173,
 
   // Volume mounts for persistent caching
   "mounts": [
@@ -44,13 +46,13 @@
         "plumbiu.vscode-env-ally",
         "dbaeumer.vscode-eslint",
         "codezombiech.gitignore",
-        "DavidAnson.vscode-markdownlint",
-        "codeandstuff.package-json-upgrade",
         "YoavBls.pretty-ts-errors",
         "esbenp.prettier-vscode",
         "rvest.vs-code-prettier-eslint",
         "stylelint.vscode-stylelint",
-        "Vue.volar"
+        "Vue.volar",
+        "christian-kohler.path-intellisense",
+        "rentalhost.npm-outdated-plus"
       ]
     }
   }

@@ -2,6 +2,7 @@
   "name": "vuecalendry",
   "version": "1.0.0",
   "description": "A modern, TypeScript-first Vue 3 calendar component.",
+  "type": "module",
   "main": "src/index.ts",
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "@types/node": "^22.19.0",
     "@typescript-eslint/eslint-plugin": "^8.46.3",
     "@typescript-eslint/parser": "^8.46.3",
+    "@vitejs/plugin-vue": "^6.0.1",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
@@ -49,9 +51,17 @@
     "prettier": "^3.6.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3",
-    "vitepress": "^1.6.4"
+    "vite": "^7.2.2",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.6.5"
   },
   "dependencies": {
     "vue": "^3.5.24"
+  },
+  "overrides": {
+    "vite": "^7.2.2"
+  },
+  "resolutions": {
+    "vite": "^7.2.2"
   }
 }
