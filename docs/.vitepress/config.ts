@@ -4,6 +4,13 @@ import {
   groupIconMdPlugin,
   groupIconVitePlugin,
 } from 'vitepress-plugin-group-icons'
+import tailwindcss from '@tailwindcss/vite'
+
+const alias = {
+  '@': fileURLToPath(new URL('../../src', import.meta.url)),
+  '@docs': fileURLToPath(new URL('../../docs', import.meta.url)),
+  '@examples': fileURLToPath(new URL('../../docs/examples', import.meta.url)),
+}
 
 export default defineConfig({
   title: 'VueCalendry',
@@ -46,15 +53,9 @@ export default defineConfig({
     // css: {
     //   postcss: './postcss.config.js',
     // },
-    plugins: [groupIconVitePlugin()],
+    plugins: [groupIconVitePlugin(), tailwindcss()],
     resolve: {
-      alias: {
-        '@': fileURLToPath(new URL('../../src', import.meta.url)),
-        '@docs': fileURLToPath(new URL('../../docs', import.meta.url)),
-        '@examples': fileURLToPath(
-          new URL('../../docs/examples', import.meta.url),
-        ),
-      },
+      alias,
     },
   },
 })

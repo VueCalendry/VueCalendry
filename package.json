@@ -3,7 +3,19 @@
   "version": "1.0.0",
   "description": "A modern, TypeScript-first Vue 3 calendar component.",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "./dist/vuecalendry.umd.js",
+  "module": "./dist/vuecalendry.es.js",
+  "types": "./dist/vuecalendry.es.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/vuecalendry.es.d.ts",
+      "import": "./dist/vuecalendry.es.js",
+      "require": "./dist/vuecalendry.umd.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VueCalendry/VueCalendry.git"
@@ -28,21 +40,30 @@
   "engineStrict": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "build": "pnpm run type-check && vite build",
+    "type-check": "vue-tsc --noEmit",
     "test": "pnpm run test",
     "dev": "pnpm run docs:dev",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
+  "peerDependencies": {
+    "@vue/language-core": "~3.0.1",
+    "vue": "^3.5.24"
+  },
   "devDependencies": {
     "@eslint/css": "^0.14.1",
     "@eslint/js": "^9.39.1",
     "@eslint/json": "^0.14.0",
     "@eslint/markdown": "^7.5.1",
+    "@microsoft/api-extractor": "^7.54.0",
+    "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^22.19.0",
     "@typescript-eslint/eslint-plugin": "^8.46.3",
     "@typescript-eslint/parser": "^8.46.3",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/language-core": "~3.0.1",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
@@ -50,19 +71,24 @@
     "globals": "^16.5.0",
     "jiti": "^2.6.1",
     "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3",
+    "unplugin-dts": "1.0.0-beta.6",
     "vite": "^7.2.2",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-group-icons": "^1.6.5"
+    "vitepress-plugin-group-icons": "^1.6.5",
+    "vue-tsc": "^3.1.3"
   },
   "dependencies": {
     "vue": "^3.5.24"
   },
   "overrides": {
-    "vite": "^7.2.2"
+    "vite": "^7.2.2",
+    "typescript": "^5.9.3"
   },
   "resolutions": {
-    "vite": "^7.2.2"
+    "vite": "^7.2.2",
+    "typescript": "^5.9.3"
   }
 }

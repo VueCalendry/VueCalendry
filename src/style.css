@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Base theme (light + dark) */
+:root {
+  --cal-bg: white;
+  --cal-border: #e5e7eb;
+  --cal-primary: #3b82f6;
+  --cal-text: #111827;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cal-bg: #111827;
+    --cal-border: #374151;
+    --cal-text: #f9fafb;
+  }
+}

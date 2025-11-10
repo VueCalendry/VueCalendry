@@ -1,8 +1,10 @@
-import { type App } from 'vue'
+import { defineCustomElement, type App } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import 'virtual:group-icons.css'
-import { VueCalendry } from '@/index'
 import './custom.css'
+import { VueCalendry } from '@/index'
+import '@/style.css'
+import DemoWrapper from './DemoWrapper.vue'
 
 export default {
   ...DefaultTheme,
@@ -10,5 +12,7 @@ export default {
   enhanceApp({ app }: { app: App }) {
     // Register your global components here
     app.component('VueCalendry', VueCalendry)
+
+    app.component('DemoWrapper', DemoWrapper)
   },
 }
